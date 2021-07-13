@@ -34,8 +34,8 @@ RUN echo "export ISTIO_HOME=$ISTIO_HOME" | tee -a ~/.bashrc \
     && echo "export PATH=$ISTIO_HOME/bin:$PATH" | tee -a ~/.bashrc
 
 # install python packages
-COPY old/container /opt/
-RUN pip install -r /opt/requirements.txt
+# COPY old/container /opt/
+# RUN pip install -r /opt/requirements.txt
 
 # add handy alias for interactive mode (for development purpose)
 RUN echo "alias sur='/bin/bash /opt/image_sur.sh'" | tee -a ~/.bashrc
